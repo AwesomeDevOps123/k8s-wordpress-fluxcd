@@ -19,4 +19,4 @@ spec:
     service:
       type: ClusterIP
     image:
-      tag: 6.3.1 # {"$imagepolicy": "flux-system:wordpress:tag"}  
+      tag: 6.4.3 # {"$imagepolicy": "flux-system:wordpress:tag"}  
