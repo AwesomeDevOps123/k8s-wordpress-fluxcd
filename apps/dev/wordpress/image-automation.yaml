@@ -1,0 +1,9 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: wordpress-automation
+  namespace: flux-system
+spec: 
+  update:
+    path: ./apps/dev/wordpress
+    strategy: Setters

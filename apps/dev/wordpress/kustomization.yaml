@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base/wordpress
+  - image-policy.yaml
+patches:
+  - path: wordpress-values.yaml
+    target:
+      kind: HelmRelease
+  - path: image-automation.yaml
+    target:
+      kind: ImageUpdateAutomation
+
