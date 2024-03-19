@@ -146,6 +146,15 @@ For a detailed guide on how image automation works, please visit - https://fluxc
 
 The initial image tag used in this repo was 6.3.1 for both environments, which can be seen in the first commit made to the repo. If the flux image automation is working as expected, we should see extra commits from flux, updating each environment with the relevant tag.
 
+**Potential improvements**
+
+Things that could be improved:
+
+    - Manage secrets via Flux, using integrated tools like SOPS
+    - Configure different numbers of replicas based on environment requirement, using the helm values files (scaling Wordpress horizontally requires addressing the database as well, since all instances share a single database that can become a point of contention)
+    - Configure required and limit resources
+    - Configure HPA
+
 **Clean up**
 
 To delete all the resources including the kind clusters run:
